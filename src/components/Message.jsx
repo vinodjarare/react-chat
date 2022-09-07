@@ -6,6 +6,7 @@ const Message = ({message}) => {
   const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
   const timeago =message.date.toString();
+  // eslint-disable-next-line
   const ago = format(timeago.slice(18,28)*1000);
   const ref = useRef();
 

@@ -1,5 +1,4 @@
 import {
-  getStorage,
   ref,
   uploadBytesResumable,
   getDownloadURL,
