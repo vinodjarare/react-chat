@@ -1,15 +1,15 @@
-import Navbar from './Navbar'
-import Search from './Search'
-import Chats from './Chats'
+import Navbar from "./Navbar";
+import Search from "./Search";
+import Chats from "./Chats";
 
-const Sidebar = () => {
+const Sidebar = ({ toggle }) => {
   return (
     <div className="sidebar">
-      <Navbar/>
-      <Search/>
-      <Chats/>
+      <Navbar />
+      <Search />
+      <Chats toggle={toggle} />
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
