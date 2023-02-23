@@ -7,10 +7,6 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 
 function App() {
-  const apiUrl = process.env.REACT_APP_API_URL;
-
-  console.log(apiUrl);
-
   const { currentUser } = useContext(AuthContext);
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
