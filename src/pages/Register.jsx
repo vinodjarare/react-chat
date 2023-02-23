@@ -1,15 +1,8 @@
-import {
-  ref,
-  uploadBytesResumable,
-  getDownloadURL,
-} from "firebase/storage";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { FcAddImage } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  createUserWithEmailAndPassword,
-  updateProfile,
-} from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db, storage } from "../firebase";
 const Register = () => {
   const navigate = useNavigate();
@@ -43,7 +36,7 @@ const Register = () => {
               email,
               photoURL: downloadURL,
             });
-            await setDoc(doc(db,"userChats",res.user.uid),{});
+            await setDoc(doc(db, "userChats", res.user.uid), {});
 
             navigate("/");
           });
